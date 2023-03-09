@@ -10,6 +10,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: LoginPage(),
 
     );
@@ -23,6 +24,13 @@ class LoginPage extends StatelessWidget{
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
+        child: Container(
+          width: 350,
+          height: 450,
+          decoration: BoxDecoration(
+             color: Colors.blue,
+            borderRadius: BorderRadius.circular(28)
+          ),
         child: Column(
           // mainAxisAlignment: MainAxisAlignment.spaceAround,
           mainAxisAlignment: MainAxisAlignment.center,
@@ -32,7 +40,7 @@ class LoginPage extends StatelessWidget{
               child: Image(
                 image: AssetImage("images/logo.jpg"),
                 width: 150,
-                height: 80,
+                height: 100,
             ),
             ),
             Padding(
@@ -42,7 +50,7 @@ class LoginPage extends StatelessWidget{
           ],
         ),
       ),
+    )
     );
   } 
 }
-
