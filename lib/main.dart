@@ -37,7 +37,7 @@ class LoginPage extends StatelessWidget{
             ),
             Padding(
               padding: EdgeInsets.only(left: 50, right: 50, bottom: 100),
-              child: Text("PUSING PUSING TING"),
+              child: Text("PUSING PUSING TING TING"),
               ),
           ],
         ),
