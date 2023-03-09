@@ -28,7 +28,7 @@ class LoginPage extends StatelessWidget{
           width: 350,
           height: 450,
           decoration: BoxDecoration(
-             color: Colors.blue,
+             color: Color.fromARGB(255, 41, 134, 209),
             borderRadius: BorderRadius.circular(28)
           ),
         child: Column(
@@ -45,11 +45,13 @@ class LoginPage extends StatelessWidget{
             ),
             Padding(
               padding: EdgeInsets.only(left: 50, right: 50, bottom: 100),
-              child: Text("PUSING PUSING TING TING"),
+              child: Text("PUSING PUSING TING TING",
+              style: TextStyle(color: Colors.white))
               ),
           ],
         ),
       ),
+
     )
     );
   } 
