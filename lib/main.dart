@@ -46,18 +46,3 @@ class LoginPage extends StatelessWidget{
   } 
 }
 
-// class logo extends StatelessWidget{
-//   @override
-//   Widget build(BuildContext context) {
-//     return MaterialApp(
-//       home: Center(
-//         child: Container(
-//         child: Image(
-//           image: AssetImage("images/logo.jpg"),
-//         ),  
-//         ),
-//       ),
-//     );
-//   }
-
-// }
