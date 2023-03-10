@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application/cons.dart';
 
 void main() {
   runApp(const MyApp());
@@ -31,24 +32,34 @@ class LoginPage extends StatelessWidget{
           // decoration: BoxDecoration(
           //   borderRadius: BorderRadius.circular(28)
           // ),
-        child: Column(
-          // mainAxisAlignment: MainAxisAlignment.spaceAround,
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Padding(
-              padding: EdgeInsets.only(left: 150, right: 150, bottom: 100),
-              child: Image(
-                image: AssetImage("images/logo.jpg"),
-                width: 150,
-                height: 100,
-            ),
-            ),
-            Padding(
-              padding: EdgeInsets.only(left: 50, right: 50, bottom: 100),
-              child: Text("PUSING PUSING TING TING",
-              style: TextStyle(color: Colors.black))
+        child: Container(
+          margin: EdgeInsets.symmetric(horizontal: 32),
+          child: Column(
+            // mainAxisAlignment: MainAxisAlignment.spaceAround,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Padding(
+                padding: EdgeInsets.only(left: 120, right: 120, bottom: 250),
+                child: Image(
+                  image: AssetImage("images/logo.jpg"),
+                  width: 150,
+                  height: 100,
               ),
-          ],
+              ),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                Text(
+                  "Login", style: textTextStyle.copyWith(
+                  fontSize: 25,
+                  ),
+                ),
+                SizedBox()
+              ],
+            )
+            ],
+          ),
         ),
       ),
 
