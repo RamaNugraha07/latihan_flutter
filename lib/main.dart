@@ -46,7 +46,8 @@ class LoginPage extends StatelessWidget{
                   height: 100,
               ),
               ),
-            Column(
+
+              Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
@@ -57,7 +58,31 @@ class LoginPage extends StatelessWidget{
                 ),
                 SizedBox()
               ],
-            )
+            ),
+
+              TextField(
+                decoration : InputDecoration(
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  hintText: "username"
+                ), 
+              ),
+
+              TextField(
+                decoration : InputDecoration(
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  suffixIcon: InkWell(onTap: (){
+                    // ketika icon ditekan...
+                  }, 
+                  child: Icon(Icons.visibility_outlined),
+                  ),
+                  hintText: "password"
+                ),
+              ),
+
             ],
           ),
         ),
