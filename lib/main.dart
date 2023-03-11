@@ -84,7 +84,7 @@ class LoginPage extends StatelessWidget{
 
               Container(
                 // padding: EdgeInsets.only(top: 50, right: 240),
-                width:  ,
+                width:  200,
                 height: 45,
                 child: TextButton(
                   style: TextButton.styleFrom(
