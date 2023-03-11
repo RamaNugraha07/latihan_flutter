@@ -1,4 +1,5 @@
 import 'package:Sales/dashboard.dart';
+import 'package:Sales/pages/splaash_page.dart';
 import 'package:Sales/profile.dart';
 import 'package:flutter/material.dart';
 import 'package:Sales/cons.dart';
@@ -14,14 +15,14 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: LoginPage(),
+      home: SplashScreen(),
 
     );
   }
 }
 
-class LoginPage extends StatelessWidget{
-  const LoginPage({super.key});
+class SplashScreen extends StatelessWidget{
+  const SplashScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
