@@ -1,3 +1,4 @@
+import 'package:Sales/dashboard.dart';
 import 'package:flutter/material.dart';
 import 'package:Sales/cons.dart';
 
@@ -93,17 +94,23 @@ class LoginPage extends StatelessWidget{
                       borderRadius: BorderRadius.circular(10),
                     )
                   ),
-                  onPressed: () {},
+                  onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => const Dashboard()), 
+                      );
+                  },
                   child: Text(
                     "Login",
                     style: TextStyle(
                       color: Color.fromRGBO(255, 255, 255, 1)
                     ),
                   ),
-                ),
-              )
+                )
+                )
+              
 
-            ],
+          ],
           ),
         ),
       ),
