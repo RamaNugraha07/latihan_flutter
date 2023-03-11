@@ -7,12 +7,18 @@ class  profile extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        appBar: AppBar(
+        title: const Text('Profile'),
+      ),
+      body: Center(
+        child: ElevatedButton(
           onPressed: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => const Dashboard()),
-            );
+            Navigator.pop(context);
           },
-        );
+          child: const Text("Go Back!"),
+        ),
+      ),
+    );
+
 }
 }
