@@ -53,7 +53,7 @@ class LoginPage extends StatelessWidget{
               children: [
                 Text(
                   "Login", style: textTextStyle.copyWith(
-                  fontSize: 25,
+                  fontSize: 25, fontWeight: FontWeight.bold,
                   ),
                 ),
                 SizedBox()
