@@ -1,4 +1,5 @@
 import 'package:Sales/dashboard.dart';
+import 'package:Sales/profile.dart';
 import 'package:flutter/material.dart';
 import 'package:Sales/cons.dart';
 
@@ -82,7 +83,7 @@ class LoginPage extends StatelessWidget{
                 ),
               ),
               SizedBox(height: 20,),
-
+  
               Container(
                 // padding: EdgeInsets.only(top: 50, right: 240),
                 width:  200,
@@ -94,10 +95,11 @@ class LoginPage extends StatelessWidget{
                       borderRadius: BorderRadius.circular(10),
                     )
                   ),
+                  //Untuk melakukan next page atau MultiPage
                   onPressed: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => const Dashboard()), 
+                        MaterialPageRoute(builder: (context) => const profile()), 
                       );
                   },
                   child: Text(
