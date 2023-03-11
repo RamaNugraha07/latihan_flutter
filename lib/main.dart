@@ -80,6 +80,28 @@ class LoginPage extends StatelessWidget{
                   hintText: "password"
                 ),
               ),
+              SizedBox(height: 20,),
+
+              Container(
+                // padding: EdgeInsets.only(top: 50, right: 240),
+                width:  ,
+                height: 45,
+                child: TextButton(
+                  style: TextButton.styleFrom(
+                    backgroundColor: Color.fromRGBO(38, 20, 95, 1),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10),
+                    )
+                  ),
+                  onPressed: () {},
+                  child: Text(
+                    "Login",
+                    style: TextStyle(
+                      color: Color.fromRGBO(255, 255, 255, 1)
+                    ),
+                  ),
+                ),
+              )
 
             ],
           ),
