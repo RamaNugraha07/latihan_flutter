@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application/cons.dart';
+import 'package:Sales/cons.dart';
 
 void main() {
   runApp(const MyApp());
