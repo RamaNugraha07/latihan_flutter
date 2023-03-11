@@ -26,7 +26,7 @@ class LoginPage extends StatelessWidget{
     return Scaffold(
       body: Center(
         child: Container(
-          color: Color(0xFFDEE3F2),
+          color: Color.fromRGBO(222, 227, 242, 1),
           // width: 350,
           // height: 450,
           // decoration: BoxDecoration(
@@ -36,10 +36,10 @@ class LoginPage extends StatelessWidget{
           margin: EdgeInsets.symmetric(horizontal: 32),
           child: Column(
             // mainAxisAlignment: MainAxisAlignment.spaceAround,
-            mainAxisAlignment: MainAxisAlignment.center,
+            // mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Padding(
-                padding: EdgeInsets.only(left: 120, right: 120, bottom: 250),
+                padding: EdgeInsets.only(left: 100, right: 100, top: 120),
                 child: Image(
                   image: AssetImage("images/logo.jpg"),
                   width: 150,
@@ -47,18 +47,15 @@ class LoginPage extends StatelessWidget{
               ),
               ),
 
-              Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                Text(
-                  "Login", style: textTextStyle.copyWith(
-                  fontSize: 25, fontWeight: FontWeight.bold,
-                  ),
+              Padding(
+                padding: EdgeInsets.only(top: 50, right: 240, bottom: 25),
+                child: Center(
+                child: Text(
+                  "Masuk",
+                  style: TextStyle(fontSize: 26, fontWeight: FontWeight.bold),
                 ),
-                SizedBox()
-              ],
-            ),
+                ),
+              ),
 
               TextField(
                 decoration : InputDecoration(
@@ -68,6 +65,7 @@ class LoginPage extends StatelessWidget{
                   hintText: "username"
                 ), 
               ),
+              SizedBox(height: 20,),
 
               TextField(
                 decoration : InputDecoration(
