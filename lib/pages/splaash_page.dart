@@ -17,7 +17,7 @@ class SplashScreenState extends State<SplashScreen> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    Timer(const Duration(milliseconds: 3000), () {
+    Timer(const Duration(milliseconds: 2500), () {
     });
   }
 
@@ -32,7 +32,7 @@ class SplashScreenState extends State<SplashScreen> {
             begin: Alignment.topCenter
             )
         ),
-        child: Image.asset("images/logo.jpg"),
+        child: Image.asset("images/glc.png"),
       ),
     );
   }
