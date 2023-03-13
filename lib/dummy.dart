@@ -12,31 +12,26 @@ class Dummy extends StatefulWidget {
 
 class _DummyState extends State<Dummy> {
   List _listdata = [];
-  int status = 0;
+  int status = 2;
 
-  Future _getData() async {
-    try {
-      final response = await http.get(
-        Uri.parse('http://192.168.1.20/latihan_flutter/sqlConnection/connection.php'));
-      if (response.statusCode == 200) {
-        final data = jsonDecode(response.body);
-        setState(() {
-          _listdata = data;
-        });
-      }
-      status = response.statusCode;
-      print(response);
-    } catch (e) {
-      print(e);
-    }
+  Future<List> getData() async {
+  final response = await http.get(Uri.parse('http://192.168.1.28/latihan_flutter/sqlConnection/connection.php'));
+  if (response.statusCode == 200) {
+    return json.decode(response.body);
+  } else {
+    throw Exception('Failed to load data');
   }
+}
+
 
   @override
   void initState() {
-    _getData();
-    print(_listdata);
-    print("list data : " + status.toString());
     super.initState();
+    getData().then((data) {
+      print(data);
+    }).catchError((error) {
+      print(error);
+    });
   }
 
   @override
