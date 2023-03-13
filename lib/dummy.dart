@@ -15,7 +15,7 @@ class _DummyState extends State<Dummy> {
   int status = 2;
 
   Future<List> getData() async {
-  final response = await http.get(Uri.parse('http://192.168.1.28/latihan_flutter/sqlConnection/connection.php'));
+  final response = await http.get(Uri.parse('http://192.168.1.34/sqlConnection/connection.php'));
   if (response.statusCode == 200) {
     return json.decode(response.body);
   } else {
