@@ -32,7 +32,7 @@ class SplashScreenState extends State<SplashScreen> {
             begin: Alignment.topCenter
             )
         ),
-        child: Image.asset("images/glc.png"),
+        child: Image.asset("images/glc.jpg"),
       ),
     );
   }
