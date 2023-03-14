@@ -73,7 +73,11 @@ class Dashboard extends StatelessWidget {
               elevation: 10,
               margin: const EdgeInsets.all(20),
               child: InkWell(
-                onTap: (){},
+                onTap: (){
+                  Navigator.push(
+                    context, MaterialPageRoute(builder: (context) => Profile()),
+                    );
+                },
                 splashColor: Colors.lightBlueAccent,
                 child: Center(
                   child: Column(
