@@ -49,10 +49,10 @@ class _BottomNaviBarState extends State<BottomNaviBar>{
             icon: Icon(Icons.track_changes, color: Colors.black,),
             label: 'Tracker',
           ),
-          // BottomNavigationBarItem(
-          //   icon: Icon(Icons.account_circle,  color: Colors.black,),
-          //   label: 'Profil',
-          // ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.account_circle,  color: Colors.black,),
+            label: 'Profil',
+          ),
         ],
       ),
     );  
