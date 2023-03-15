@@ -5,9 +5,9 @@ class Tracker extends StatelessWidget {
 
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Tracker'),
-      ),
+      // appBar: AppBar(
+      //   title: const Text('Tracker'),
+      // ),
       body: Center(
       child: Text('Cooming Soon'),
       )
