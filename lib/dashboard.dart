@@ -14,7 +14,7 @@ class Dashboard extends StatelessWidget {
       // ),
       body: Center(
         child: SizedBox(
-        height: 450, //Atur ketinggian card
+        height: 700, //Atur ketinggian card
         
         child: GridView.count(
         padding: const EdgeInsets.all(25),
@@ -37,7 +37,7 @@ class Dashboard extends StatelessWidget {
                       ClipRRect(
                         borderRadius: BorderRadius.circular(5.0),
                         child: Image.asset('lib/icons/input.png')),
-                      Text('Input', style: TextStyle(fontSize: 15.0),),
+                      Text('Input Customer', style: TextStyle(fontSize: 15.0),),
                       
                     ],
                   ),
@@ -62,7 +62,32 @@ class Dashboard extends StatelessWidget {
                       ClipRRect(
                         borderRadius: BorderRadius.circular(5.0),
                         child: Image.asset('lib/icons/upload.png')),
-                      Text('Update', style: TextStyle(fontSize: 15.0),),
+                      Text('Update Customer', style: TextStyle(fontSize: 15.0),),
+                      
+                    ],
+                  ),
+                ),
+              ),
+
+          ),
+
+          Card(
+            color: Color(0xFFDEE3F2),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(40)),
+              elevation: 10,
+              margin: const EdgeInsets.all(20),
+              child: InkWell(
+                onTap: (){},
+                splashColor: Colors.lightBlueAccent,
+                child: Center(
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: <Widget>[
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(5.0),
+                        child: Image.asset('lib/icons/verif.png')),
+                      Text('Verifikasi Customer', style: TextStyle(fontSize: 15.0),),
                       
                     ],
                   ),
