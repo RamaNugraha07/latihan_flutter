@@ -72,6 +72,8 @@ flutter:
       - lib/icons/persebaran.png
       - lib/icons/upload.png
 
+      - images/default-pp.png
+
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
 
