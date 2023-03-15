@@ -1,12 +1,11 @@
 import 'package:Sales/dashboard.dart';
 import 'package:Sales/dummy.dart';
 import 'package:Sales/navbar.dart';
-import 'package:Sales/pages/splaash_page.dart';
 import 'package:Sales/profile.dart';
 import 'package:flutter/material.dart';
 import 'package:Sales/cons.dart';
 
-class Login extends StatelessWidget{
+class Login extends StatelessWidget{  
   const Login({super.key});
 
 @override
@@ -85,7 +84,7 @@ class Login extends StatelessWidget{
                   onPressed: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => const Login()), 
+                        MaterialPageRoute(builder: (context) => const BottomNaviBar()), 
                       );
                   },
                   child: Text(

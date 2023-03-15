@@ -1,30 +1,25 @@
 import 'package:Sales/dashboard.dart';
+import 'package:Sales/login.dart';
+import 'package:Sales/monitoring.dart';
+import 'package:Sales/profile.dart';
+import 'package:Sales/tracker.dart';
 import 'package:flutter/material.dart';
 
-class BottomNavi extends StatefulWidget {
-  const BottomNavi({super.key});
+class BottomNaviBar extends StatefulWidget {
+  const BottomNaviBar({super.key});
 
   @override
-  State<BottomNavi> createState() => _BottomNaviState();
+  State<BottomNaviBar> createState() => _BottomNaviBarState();
 }
 
-class _BottomNaviState extends State<BottomNavi>{
+class _BottomNaviBarState extends State<BottomNaviBar>{
 
  int _selectedIndex = 0;
-  static const TextStyle optionStyle = TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
-  static const List<Widget> _widgetOptions = <Widget>[
-    Text(
-      'Index 0: Home',
-      style: optionStyle,
-    ),
-    Text(
-      'Index 1: Business',
-      style: optionStyle,
-    ),
-    Text(
-      'Index 2: School',
-      style: optionStyle,
-    ),
+  final List<Widget> _children = [
+    Dashboard(),
+    Monitoring(),
+    Tracker(),
+    Profile(),
   ];
 
   void _onItemTapped(int index) {
@@ -36,27 +31,29 @@ class _BottomNaviState extends State<BottomNavi>{
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-      child: _widgetOptions.elementAt(_selectedIndex),  
-       ),
+      body: _children[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
+        selectedItemColor: Colors.amber[800],
+        onTap : _onItemTapped,
+        currentIndex : _selectedIndex,
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'Home',
+            icon: Icon(Icons.home, color: Colors.black,),
+            label: 'Dashboard',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.business),
-            label: 'Business',
+            icon: Icon(Icons.monitor, color: Colors.black,),
+            label: 'Monitoring',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.school),
-            label: 'School',
+            icon: Icon(Icons.track_changes, color: Colors.black,),
+            label: 'Tracker',
           ),
+          // BottomNavigationBarItem(
+          //   icon: Icon(Icons.account_circle,  color: Colors.black,),
+          //   label: 'Profil',
+          // ),
         ],
-        currentIndex: _selectedIndex,
-        selectedItemColor: Colors.amber[800],
-        onTap: _onItemTapped,
       ),
     );  
   }
