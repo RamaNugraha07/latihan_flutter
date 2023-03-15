@@ -55,6 +55,7 @@ class Login extends StatelessWidget{
               SizedBox(height: 20,),
 
               TextField(
+                obscureText: true,
                 decoration : InputDecoration(
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(10),
@@ -90,7 +91,8 @@ class Login extends StatelessWidget{
                   child: Text(
                     "Login",
                     style: TextStyle(
-                      color: Color.fromRGBO(255, 255, 255, 1)
+                      color: Color.fromRGBO(255, 255, 255, 1),
+
                     ),
                   ),
                 )
