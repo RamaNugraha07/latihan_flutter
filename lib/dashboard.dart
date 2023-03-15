@@ -14,12 +14,12 @@ class Dashboard extends StatelessWidget {
       // ),
       body: Center(
         child: SizedBox(
-        height: 700, //Atur ketinggian card
+        height: 600, //Atur ketinggian card
         
         child: GridView.count(
-        padding: const EdgeInsets.all(25),
+        padding: const EdgeInsets.all(20),
         crossAxisCount: 2,
-        crossAxisSpacing: 25, // untuk mengatur jarak card horizontal
+        crossAxisSpacing: 15, // untuk mengatur jarak card horizontal
         children: <Widget>[
           Card(
             color: Color(0xFFDEE3F2),
@@ -87,7 +87,7 @@ class Dashboard extends StatelessWidget {
                       ClipRRect(
                         borderRadius: BorderRadius.circular(5.0),
                         child: Image.asset('lib/icons/verif.png')),
-                      Text('Verifikasi Customer', style: TextStyle(fontSize: 15.0),),
+                      Text('Verifikasi', style: TextStyle(fontSize: 15.0),),
                       
                     ],
                   ),
