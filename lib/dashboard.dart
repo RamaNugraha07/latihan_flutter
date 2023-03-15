@@ -12,9 +12,14 @@ class Dashboard extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Dashboard'),
       ),
-      body: GridView.count(
+      body: Center(
+        child: SizedBox(
+        height: 450, //Atur ketinggian card
+        
+        child: GridView.count(
         padding: const EdgeInsets.all(25),
         crossAxisCount: 2,
+        crossAxisSpacing: 25, // untuk mengatur jarak card horizontal
         children: <Widget>[
           Card(
             color: Color(0xFFDEE3F2),
@@ -121,6 +126,8 @@ class Dashboard extends StatelessWidget {
           ),
 
         ],
+        ),
+      ),
       ),
       ); 
   }
