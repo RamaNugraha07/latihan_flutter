@@ -71,30 +71,30 @@ class Dashboard extends StatelessWidget {
 
           ),
 
-          Card(
-            color: Color(0xFFDEE3F2),
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(40)),
-              elevation: 10,
-              margin: const EdgeInsets.all(20),
-              child: InkWell(
-                onTap: (){},
-                splashColor: Colors.lightBlueAccent,
-                child: Center(
-                  child: Column(
-                    mainAxisSize: MainAxisSize.min,
-                    children: <Widget>[
-                      ClipRRect(
-                        borderRadius: BorderRadius.circular(5.0),
-                        child: Image.asset('lib/icons/verif.png')),
-                      Text('Verifikasi', style: TextStyle(fontSize: 15.0),),
+          // Card(
+          //   color: Color(0xFFDEE3F2),
+          //   shape: RoundedRectangleBorder(
+          //     borderRadius: BorderRadius.circular(40)),
+          //     elevation: 10,
+          //     margin: const EdgeInsets.all(20),
+          //     child: InkWell(
+          //       onTap: (){},
+          //       splashColor: Colors.lightBlueAccent,
+          //       child: Center(
+          //         child: Column(
+          //           mainAxisSize: MainAxisSize.min,
+          //           children: <Widget>[
+          //             ClipRRect(
+          //               borderRadius: BorderRadius.circular(5.0),
+          //               child: Image.asset('lib/icons/verif.png')),
+          //             Text('Verifikasi', style: TextStyle(fontSize: 15.0),),
                       
-                    ],
-                  ),
-                ),
-              ),
+          //           ],
+          //         ),
+          //       ),
+          //     ),
 
-          ),
+          // ),
           
           Card(
             color: Color(0xFFDEE3F2),
