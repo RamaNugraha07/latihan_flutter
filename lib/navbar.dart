@@ -1,6 +1,8 @@
 import 'package:Sales/dashboard.dart';
 import 'package:Sales/login.dart';
+import 'package:Sales/monitoring.dart';
 import 'package:Sales/profile.dart';
+import 'package:Sales/tracker.dart';
 import 'package:flutter/material.dart';
 
 class BottomNaviBar extends StatefulWidget {
@@ -15,6 +17,8 @@ class _BottomNaviBarState extends State<BottomNaviBar>{
  int _selectedIndex = 0;
   final List<Widget> _children = [
     Dashboard(),
+    Monitoring(),
+    Tracker(),
     Profile(),
   ];
 
@@ -29,23 +33,27 @@ class _BottomNaviBarState extends State<BottomNaviBar>{
     return Scaffold(
       body: _children[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
+        selectedItemColor: Colors.amber[800],
         onTap : _onItemTapped,
         currentIndex : _selectedIndex,
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
+            icon: Icon(Icons.home, color: Colors.black,),
             label: 'Dashboard',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.account_circle),
-            label: 'Profil',
+            icon: Icon(Icons.monitor, color: Colors.black,),
+            label: 'Monitoring',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.track_changes, color: Colors.black,),
+            label: 'Tracker',
           ),
           // BottomNavigationBarItem(
-          //   icon: Icon(Icons.school),
-          //   label: 'School',
+          //   icon: Icon(Icons.account_circle,  color: Colors.black,),
+          //   label: 'Profil',
           // ),
         ],
-        selectedItemColor: Colors.amber[800],
       ),
     );  
   }
