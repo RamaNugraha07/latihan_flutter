@@ -116,7 +116,7 @@ class Dashboard extends StatelessWidget {
                       ClipRRect(
                         borderRadius: BorderRadius.circular(5.0),
                         child: Image.asset('lib/icons/persebaran.png')),
-                      Text('Persebaran', style: TextStyle(fontSize: 15.0),),
+                      Text('Persebaran Brosur', style: TextStyle(fontSize: 15.0),),
                       
                     ],
                   ),
@@ -141,7 +141,7 @@ class Dashboard extends StatelessWidget {
                       ClipRRect(
                         borderRadius: BorderRadius.circular(5.0),
                         child: Image.asset('lib/icons/lokasi.png')),
-                      Text('Lokasi', style: TextStyle(fontSize: 15.0),),
+                      Text('Lokasi Sales', style: TextStyle(fontSize: 15.0),),
                       
                     ],
                   ),
