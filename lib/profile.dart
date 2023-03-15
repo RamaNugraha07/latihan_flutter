@@ -181,7 +181,7 @@ class Profile extends StatelessWidget{
                   context: context,
                   builder: (BuildContext context) {
                     return AlertDialog(
-                      title: Text('Konfirmasi dulu'),
+                      title: Text('Konformasi Dulu'),
                       content: Text("Yakin mau keluar?"),
                       actions: [
                         ElevatedButton(
