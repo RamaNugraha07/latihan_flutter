@@ -1,5 +1,6 @@
 import 'package:Sales/dashboard.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
 import 'package:Sales/dashboard.dart';
 
@@ -175,7 +176,31 @@ class Profile extends StatelessWidget{
               ),
               SizedBox(height: 20),
               InkWell(
-                onTap: (){},
+                onTap: (){
+                  showDialog(
+                  context: context,
+                  builder: (BuildContext context) {
+                    return AlertDialog(
+                      title: Text('Konfirmasi dulu'),
+                      content: Text("Yakin mau keluar?"),
+                      actions: [
+                        ElevatedButton(
+                          child: Text("Tidak"),
+                          onPressed: () => Navigator.pop(context),
+                        ),
+                        ElevatedButton(
+                          child: Text('Iya'),
+                          onPressed: () {
+                            // Action jika tombol Iya ditekan
+                            Navigator.pop(context);
+                            SystemNavigator.pop();
+                          }
+                        ),
+                      ],
+                    );
+                  },
+                  );
+                },
                 child: Container(
                   padding: EdgeInsets.only(right: 25, left: 25),
                   width: MediaQuery.of(context).size.width,
