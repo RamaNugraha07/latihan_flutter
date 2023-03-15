@@ -2,7 +2,6 @@ import 'package:Sales/dashboard.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
-import 'package:Sales/dashboard.dart';
 
 class Profile extends StatelessWidget{
   const Profile ({super.key});
@@ -35,7 +34,7 @@ class Profile extends StatelessWidget{
                         Text('SL0002', style: TextStyle(fontSize: 16)),
                       ],
                     ),
-                    SizedBox(width: 120),
+                    SizedBox(width: 110),
                     Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.end,
