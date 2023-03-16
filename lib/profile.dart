@@ -1,9 +1,10 @@
 import 'package:Sales/dashboard.dart';
+import 'package:Sales/profil/ganti_password.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
-import 'package:Sales/ganti_password.dart';
-import 'package:Sales/tentang.dart';
+import 'package:Sales/profil/ganti_password.dart';
+import 'package:Sales/profil/tentang.dart';
 
 class Profile extends StatelessWidget{
   const Profile ({super.key});
