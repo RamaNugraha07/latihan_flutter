@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
 import 'package:Sales/ganti_password.dart';
-import 'package:Sales/buku_panduan.dart';
+import 'package:Sales/tentang.dart';
 
 class Profile extends StatelessWidget{
   const Profile ({super.key});
@@ -126,7 +126,13 @@ class Profile extends StatelessWidget{
               ),
               SizedBox(height: 20),
               InkWell(
-                onTap: (){},
+                onTap: (){
+                  Navigator.push(
+                    context, MaterialPageRoute(
+                      builder: (context) => const Tentang()
+                    ),
+                  );
+                },
                 child: Container(
                   padding: EdgeInsets.only(right: 25, left: 25),
                   width: MediaQuery.of(context).size.width,
@@ -143,13 +149,7 @@ class Profile extends StatelessWidget{
               ),
               SizedBox(height: 20),
                 InkWell(
-                onTap: (){
-                  Navigator.push(
-                    context, MaterialPageRoute(
-                      builder: (context) => const BukuPanduan()
-                    ),
-                  );
-                },
+                onTap: (){},
                 child: Container(
                   padding: EdgeInsets.only(right: 25, left: 25),
                   width: MediaQuery.of(context).size.width,

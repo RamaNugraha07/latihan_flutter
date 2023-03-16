@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class BukuPanduan extends StatelessWidget {
-  const BukuPanduan ({super.key});  
+class Tentang extends StatelessWidget {
+  const Tentang ({super.key});  
 
   Widget build(BuildContext context) {
     return Scaffold(
