@@ -1,17 +1,50 @@
+import 'package:Sales/Models/api_response.dart';
 import 'package:Sales/dashboard.dart';
-import 'package:Sales/dummy.dart';
 import 'package:Sales/navbar.dart';
-import 'package:Sales/profile.dart';
 import 'package:flutter/material.dart';
-import 'package:Sales/cons.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+import 'package:Sales/services/user_services.dart';
+import 'package:Sales/Models/User.dart';
 
-class Login extends StatelessWidget{  
-  const Login({super.key});
+import 'package:bcrypt/bcrypt.dart';
 
-@override
+class Login extends StatefulWidget{  
+  @override
+  _LoginState createState() => _LoginState();
+}
+
+class _LoginState extends State<Login> {
+
+  final GlobalKey<FormState> formKey = GlobalKey<FormState>();
+  TextEditingController txtUsername = TextEditingController();
+  TextEditingController txtPassword = TextEditingController();
+
+  void _loginUser() async {
+    // final String hashed = BCrypt.hashpw(txtPassword.text, BCrypt.gensalt());
+    ApiResponse response = await login(txtUsername.text, txtPassword.text);
+    if(response.error == null) {
+      _saveAndRedirectToDashboard(response.data as User);
+    }
+    else {
+      ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+        content: Text('${response.error}'),
+      ));
+    }
+  }
+
+  void _saveAndRedirectToDashboard(User user) async {
+    SharedPreferences pref = await SharedPreferences.getInstance();
+    await pref.setString('token', user.token ?? '');
+    await pref.setString('username', user.username ?? '');
+    Navigator.of(context).pushAndRemoveUntil(MaterialPageRoute(builder: (context) => Dashboard()),
+       (route) => false);
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
+      body: Form(
+        key: formKey,
         child: Container(
           color: Color.fromRGBO(222, 227, 242, 1),
           // width: 350,
@@ -44,18 +77,23 @@ class Login extends StatelessWidget{
                 ),
               ),
 
-              TextField(
+              TextFormField(
+                controller: txtUsername,
+                validator: (v) => v!.isEmpty ? 'aaa' : null,
                 decoration : InputDecoration(
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(10),
                   ),
                   hintText: "username"
-                ), 
+                ),
+
               ),
               SizedBox(height: 20,),
 
-              TextField(
+              TextFormField(
                 obscureText: true,
+                controller: txtPassword,
+                validator: (v) => v!.isEmpty ? 'aaa' : null,
                 decoration : InputDecoration(
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(10),
@@ -83,10 +121,13 @@ class Login extends StatelessWidget{
                   ),
                   //Untuk melakukan next page atau MultiPage
                   onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => const BottomNaviBar()), 
-                      );
+                    if(formKey.currentState!.validate()){
+                      _loginUser();
+                    }
+                      // Navigator.push(
+                      //   context,
+                      //   MaterialPageRoute(builder: (context) => const BottomNaviBar()), 
+                      // );
                   },
                   child: Text(
                     "Login",
@@ -106,5 +147,5 @@ class Login extends StatelessWidget{
 
     )
     );
-  } 
+  }
 }
