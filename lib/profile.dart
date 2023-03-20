@@ -5,6 +5,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
 import 'package:Sales/profil/ganti_password.dart';
 import 'package:Sales/profil/tentang.dart';
+import 'package:Sales/navbar.dart';
 
 class Profile extends StatelessWidget{
   const Profile ({super.key});
@@ -170,7 +171,7 @@ class Profile extends StatelessWidget{
                 onTap: (){
                   Navigator.push(
                     context, MaterialPageRoute(
-                      builder: (context) => const GantiPassword()
+                      builder: (context) => GantiPassword()
                     ),
                   );
                 },
