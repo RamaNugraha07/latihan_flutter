@@ -19,7 +19,9 @@ Future<ApiResponse> login (String username, String password) async {
     print(response.statusCode);
     switch(response.statusCode){
       case 200:
-        apiResponse.data = User.fromJson(jsonDecode(response.body));
+        Map<String, dynamic> data = jsonDecode(response.body);
+        data["user"]["username"] = username;
+        apiResponse.data = User.fromJson(data);
         break;
       case 422:
         final errors = jsonDecode(response.body)['errors'];
