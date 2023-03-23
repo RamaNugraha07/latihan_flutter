@@ -40,8 +40,10 @@ class _Monitoring extends State<Monitoring> {
       ),
       body: SingleChildScrollView(
         child: Container(
+          height: MediaQuery.of(context).size.height,
+          width: MediaQuery.of(context).size.width,
           color: Color.fromRGBO(242, 241, 246, 1),
-          padding: EdgeInsets.only(bottom: 50),
+          padding: EdgeInsets.only(bottom: 50, top: 20),
           child: 
           Column(
             children: [
@@ -55,16 +57,16 @@ class _Monitoring extends State<Monitoring> {
                   TableRow(
                     children: [
                       Padding(
-                        padding: const EdgeInsets.only(left:4.0, right:4.0, ),
-                        child: Text("Name",),
+                        padding: const EdgeInsets.only(left:4.0, right:4.0),
+                        child: Text("Nama", style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold)),
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(left:4.0, right:4.0,),
-                        child: Text("Age"),
+                        padding: const EdgeInsets.only(left:4.0, right:4.0),
+                        child: Text("Tanggal", style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold)),
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(left:4.0, right:4.0,),
-                        child: Text("Gender"),
+                        padding: const EdgeInsets.only(left:4.0, right:4.0),
+                        child: Text("Status", style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold)),
                       ),
                     ],
                   ),
@@ -108,7 +110,7 @@ class _Monitoring extends State<Monitoring> {
         return ExpansionPanel(
           headerBuilder: (BuildContext context, bool isExpanded) {
            
-                return Table(
+            return Table(
             columnWidths: {
               0: FlexColumnWidth(3),
               1: FlexColumnWidth(3),
