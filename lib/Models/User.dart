@@ -18,6 +18,7 @@ class User {
   });
 
   factory User.fromJson(Map<String, dynamic> json){
+    print(json);
     return User(
       username: json['user']['username'],
       token: json['user']['token'],
@@ -33,5 +34,6 @@ class User {
     return pref.getString('token') ?? '';
   } 
 
+  
   
 }
