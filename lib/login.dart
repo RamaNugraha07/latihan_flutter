@@ -35,7 +35,7 @@ class _LoginState extends State<Login> {
   void _saveAndRedirectToDashboard(User user) async {
     SharedPreferences pref = await SharedPreferences.getInstance();
     await pref.setString('token', user.token ?? '');
-    await pref.set
+    await pref.setString('user', user.username ?? '');
     Navigator.of(context).pushAndRemoveUntil(MaterialPageRoute(builder: (context) => BottomNaviBar()),
        (route) => false);
   }
