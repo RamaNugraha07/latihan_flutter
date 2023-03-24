@@ -1,6 +1,7 @@
 import 'package:Sales/dashboard.dart';
 import 'package:Sales/dashboard/input.dart';
 import 'package:Sales/dummy.dart';
+import 'package:Sales/inputCustomer.dart';
 import 'package:Sales/login.dart';
 import 'package:Sales/navbar.dart';
 import 'package:Sales/profile.dart';
