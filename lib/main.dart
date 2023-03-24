@@ -1,4 +1,5 @@
 import 'package:Sales/dashboard.dart';
+import 'package:Sales/dashboard/input.dart';
 import 'package:Sales/dummy.dart';
 import 'package:Sales/login.dart';
 import 'package:Sales/navbar.dart';
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Login(),
+      home: inputCustomer(),
 
     );
   }

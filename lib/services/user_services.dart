@@ -13,6 +13,7 @@ Future<ApiResponse> login (String username, String password) async {
   ApiResponse apiResponse = ApiResponse();
     final response = await http.post(
       Uri.parse('http://103.184.19.7:8080/api/login'),
+      // Uri.parse('http://127.0.0.1:8000/api/login'),
       headers: {'Accept': 'application/json'},
       body: {'username': username, 'password': password},
     );
@@ -78,3 +79,5 @@ Future<String> getToken() async {
   SharedPreferences pref = await SharedPreferences.getInstance();
   return pref.getString('token') ?? "";
 }
+
+

@@ -1,5 +1,6 @@
 import 'package:Sales/dashboard/lokasi.dart';
 import 'package:Sales/dashboard/update.dart';
+import 'package:Sales/inputCustomer.dart';
 import 'package:Sales/profile.dart';
 import 'package:flutter/material.dart';
 
@@ -30,7 +31,11 @@ class Dashboard extends StatelessWidget {
               elevation: 10,
               margin: const EdgeInsets.all(20),
               child: InkWell(
-                onTap: (){},
+                onTap: (){
+                  Navigator.push(
+                    context, MaterialPageRoute(builder: (context) => inputCustomer()),
+                    );
+                },
                 splashColor: Colors.lightBlueAccent,
                 child: Center(
                   child: Column(

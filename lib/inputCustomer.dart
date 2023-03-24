@@ -83,7 +83,7 @@ class inputCustomer extends StatelessWidget {
                 border: OutlineInputBorder(),
                 hintText:"Pilih Salah Satu",
                 ),
-                items: ['Perempuan', 'Laki-Laki']
+                items: ['male', 'female']
                 .map((String value) => DropdownMenuItem<String>(
                  value: value,
                  child: Text(value),
@@ -105,7 +105,7 @@ class inputCustomer extends StatelessWidget {
                 border: OutlineInputBorder(),
                 hintText:"Pilih Salah Satu",
                 ),
-                items: ['Ketemu', 'Chat']
+                items: ['offline', 'online']
                 .map((String value) => DropdownMenuItem<String>(
                  value: value,
                  child: Text(value),
@@ -155,7 +155,7 @@ class inputCustomer extends StatelessWidget {
                 border: OutlineInputBorder(),
                 hintText:"Pilih Salah Satu",
                 ),
-                items: ['Ragu-Ragu','Closing','Q&A','Canceled','Uncover']
+                items: ['Closing','Q&A','Canceled','Uncover']
                 .map((String value) => DropdownMenuItem<String>(
                  value: value,
                  child: Text(value),
@@ -170,8 +170,7 @@ class inputCustomer extends StatelessWidget {
             
               
             ElevatedButton(
-                onPressed: () {
-                },
+                onPressed: () {},
                 child: Text('Submit'),
               
                 style: ElevatedButton.styleFrom(
