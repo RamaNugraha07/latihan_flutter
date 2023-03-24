@@ -71,50 +71,32 @@ class inputCustomer extends StatelessWidget {
               
               
             ),
-            
+            TextField(
+              decoration: InputDecoration(
+               hintText:"Laki-laki / perempuan",
+                border: OutlineInputBorder(),
+                
+                
+              ),
+            ),
           
             
             
 
-            Container(
-            padding: const EdgeInsets.only(bottom: 10.0,), 
-            child:DropdownButtonFormField<String>(
-                decoration: InputDecoration(
-                border: OutlineInputBorder(),
-                hintText:"Pilih Salah Satu",
-                ),
-                items: ['male', 'female']
-                .map((String value) => DropdownMenuItem<String>(
-                 value: value,
-                 child: Text(value),
-                ))
-                .toList(),
-                onChanged: (String? value) {
-                  print('Selected: $value');
-                },
-              ),),
+            
                Padding(
               padding: const EdgeInsets.only(bottom: 10.0),
               child:
               Text("Metode"),
             ),   
-            Container(
-            padding: const EdgeInsets.only(bottom: 10.0,), 
-            child:DropdownButtonFormField<String>(
-                decoration: InputDecoration(
+            TextField(
+              decoration: InputDecoration(
+               hintText:"online / offline",
                 border: OutlineInputBorder(),
-                hintText:"Pilih Salah Satu",
-                ),
-                items: ['offline', 'online']
-                .map((String value) => DropdownMenuItem<String>(
-                 value: value,
-                 child: Text(value),
-                ))
-                .toList(),
-                onChanged: (String? value) {
-                  print('Selected: $value');
-                },
-              ),),
+                
+                
+              ),
+            ),
             
              Padding(
               padding: const EdgeInsets.only(bottom: 10.0),
@@ -122,23 +104,14 @@ class inputCustomer extends StatelessWidget {
               Text("Area"),
             ),   
             
-            Container(
-            padding: const EdgeInsets.only(bottom: 10.0,), 
-            child:DropdownButtonFormField<String>(
-                decoration: InputDecoration(
+           TextField(
+              decoration: InputDecoration(
+               hintText:"sumbersari",
                 border: OutlineInputBorder(),
-                hintText:"Pilih Salah Satu",
-                ),
-                items: ['Bendungan Sutami', 'Lowokwaru','sumbersari', 'merjosari', 'gajayana']
-                .map((String value) => DropdownMenuItem<String>(
-                 value: value,
-                 child: Text(value),
-                ))
-                .toList(),
-                onChanged: (String? value) {
-                  print('Selected: $value');
-                },
-              ),),
+                
+                
+              ),
+            ),
               
              Padding(
               padding: const EdgeInsets.only(bottom: 10.0,),
@@ -148,23 +121,14 @@ class inputCustomer extends StatelessWidget {
               
             ),
             
-             Container(
-            padding: const EdgeInsets.only(bottom: 10.0,), 
-            child:DropdownButtonFormField<String>(
-                decoration: InputDecoration(
+             TextField(
+              decoration: InputDecoration(
+               hintText:"Q&A",
                 border: OutlineInputBorder(),
-                hintText:"Pilih Salah Satu",
-                ),
-                items: ['Closing','Q&A','Canceled','Uncover']
-                .map((String value) => DropdownMenuItem<String>(
-                 value: value,
-                 child: Text(value),
-                ))
-                .toList(),
-                onChanged: (String? value) {
-                  print('Selected: $value');
-                },
-              ),),
+                
+                
+              ),
+            ),
                 
               
             
