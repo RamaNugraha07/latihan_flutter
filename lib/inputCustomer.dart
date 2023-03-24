@@ -71,32 +71,50 @@ class inputCustomer extends StatelessWidget {
               
               
             ),
-            TextField(
-              decoration: InputDecoration(
-               hintText:"Laki-laki / perempuan",
-                border: OutlineInputBorder(),
-                
-                
-              ),
-            ),
+            
           
             
             
 
-            
+            Container(
+            padding: const EdgeInsets.only(bottom: 10.0,), 
+            child:DropdownButtonFormField<String>(
+                decoration: InputDecoration(
+                border: OutlineInputBorder(),
+                hintText:"Pilih Salah Satu",
+                ),
+                items: ['Perempuan', 'Laki-Laki']
+                .map((String value) => DropdownMenuItem<String>(
+                 value: value,
+                 child: Text(value),
+                ))
+                .toList(),
+                onChanged: (String? value) {
+                  print('Selected: $value');
+                },
+              ),),
                Padding(
               padding: const EdgeInsets.only(bottom: 10.0),
               child:
               Text("Metode"),
             ),   
-            TextField(
-              decoration: InputDecoration(
-               hintText:"online / offline",
+            Container(
+            padding: const EdgeInsets.only(bottom: 10.0,), 
+            child:DropdownButtonFormField<String>(
+                decoration: InputDecoration(
                 border: OutlineInputBorder(),
-                
-                
-              ),
-            ),
+                hintText:"Pilih Salah Satu",
+                ),
+                items: ['Ketemu', 'Chat']
+                .map((String value) => DropdownMenuItem<String>(
+                 value: value,
+                 child: Text(value),
+                ))
+                .toList(),
+                onChanged: (String? value) {
+                  print('Selected: $value');
+                },
+              ),),
             
              Padding(
               padding: const EdgeInsets.only(bottom: 10.0),
@@ -104,14 +122,23 @@ class inputCustomer extends StatelessWidget {
               Text("Area"),
             ),   
             
-           TextField(
-              decoration: InputDecoration(
-               hintText:"sumbersari",
+            Container(
+            padding: const EdgeInsets.only(bottom: 10.0,), 
+            child:DropdownButtonFormField<String>(
+                decoration: InputDecoration(
                 border: OutlineInputBorder(),
-                
-                
-              ),
-            ),
+                hintText:"Pilih Salah Satu",
+                ),
+                items: ['Bendungan Sutami', 'Lowokwaru','sumbersari', 'merjosari', 'gajayana']
+                .map((String value) => DropdownMenuItem<String>(
+                 value: value,
+                 child: Text(value),
+                ))
+                .toList(),
+                onChanged: (String? value) {
+                  print('Selected: $value');
+                },
+              ),),
               
              Padding(
               padding: const EdgeInsets.only(bottom: 10.0,),
@@ -121,20 +148,30 @@ class inputCustomer extends StatelessWidget {
               
             ),
             
-             TextField(
-              decoration: InputDecoration(
-               hintText:"Q&A",
+             Container(
+            padding: const EdgeInsets.only(bottom: 10.0,), 
+            child:DropdownButtonFormField<String>(
+                decoration: InputDecoration(
                 border: OutlineInputBorder(),
-                
-                
-              ),
-            ),
+                hintText:"Pilih Salah Satu",
+                ),
+                items: ['Ragu-Ragu','Closing','Q&A','Canceled','Uncover']
+                .map((String value) => DropdownMenuItem<String>(
+                 value: value,
+                 child: Text(value),
+                ))
+                .toList(),
+                onChanged: (String? value) {
+                  print('Selected: $value');
+                },
+              ),),
                 
               
             
               
             ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                },
                 child: Text('Submit'),
               
                 style: ElevatedButton.styleFrom(
