@@ -96,17 +96,11 @@ class _inputCustomer extends State<inputCustomer> {
               child:
               Text("nama"),
             ),   
-            TextFormField(
-              controller: txtnama,
+            TextField(
               decoration: InputDecoration(
                hintText:"Ex: Alifia Putri Budiyanti",
                 border: OutlineInputBorder(),
               ),
-              validator: (value) {
-                if (value!.isEmpty) {
-                  return "Nama tidak boleh kosong";
-                }
-              },  
             ), 
             Padding(
               padding: const EdgeInsets.only(bottom: 10.0, top:10.0),
@@ -116,19 +110,13 @@ class _inputCustomer extends State<inputCustomer> {
               
             ),
             
-             TextFormField(
-              controller: txtnomorhp,
+             TextField(
               decoration: InputDecoration(
                hintText:"Ex: 08961686870",
                 border: OutlineInputBorder(),
                 
                 
               ),
-              validator: (value) {
-                if (value!.isEmpty) {
-                  return "No Hp Tidak Boleh Kosong";
-                }
-              }, 
             ),
              Padding(
               padding: const EdgeInsets.only(bottom: 10.0, top:10.0),
@@ -137,132 +125,81 @@ class _inputCustomer extends State<inputCustomer> {
               
               
             ),
-            TextFormField(
-              controller: txtalamat,
+            TextField(
               decoration: InputDecoration(
                hintText:"Ex: Jalan Kertosentono no 57B",
                 border: OutlineInputBorder(),
                 
                 
               ),
-              validator: (value) {
-                if (value!.isEmpty) {
-                  return "Alamat Tidak Boleh Kosong";
-                }
-              }, 
             ),
-
             Padding(
               padding: const EdgeInsets.only(bottom: 10.0, top:10.0),
               child:
-              Text("Jenis Kelamin : $selectedGender"),
+              Text("Jenis Kelamin"),
               
               
             ),
-            Container(
-            padding: const EdgeInsets.only(bottom: 10.0,), 
-            child:DropdownButtonFormField<String>(
-              value: selectedGender,
-                decoration: InputDecoration(
+            TextField(
+              decoration: InputDecoration(
+               hintText:"Laki-laki / perempuan",
                 border: OutlineInputBorder(),
-                hintText:"Pilih Salah Satu",
-                ),
-                items: ['male', 'female']
-                .map((String value) => DropdownMenuItem<String>(
-                 value: value,
-                 child: Text(value),
-                ))
-                .toList(),
-                onChanged: (String? value) {
-                  setState((){
-                    selectedGender = value;
-                    print(selectedGender);
-                  });
-                },
-              ),),
+                
+                
+              ),
+            ),
+          
+            
+            
 
-
+            
                Padding(
-              padding: const EdgeInsets.only(bottom: 10.0),
+              padding: const EdgeInsets.only(bottom: 10.0, top:10.0),
               child:
-              Text("Metode: $selectedMetode"),
-            ),  
-            Container(
-            padding: const EdgeInsets.only(bottom: 10.0,), 
-            child:DropdownButtonFormField<String>(
-                decoration: InputDecoration(
+              Text("Metode"),
+            ),   
+            TextField(
+              decoration: InputDecoration(
+               hintText:"online / offline",
                 border: OutlineInputBorder(),
-                hintText:"Pilih Salah Satu",
-                ),
-                items: ['offline', 'online']
-                .map((String value) => DropdownMenuItem<String>(
-                 value: value,
-                 child: Text(value),
-                ))
-                .toList(),
-                onChanged: (String? value) {
-                  setState((){
-                    selectedMetode = value;
-                  });
-                },
-              ),),
+                
+                
+              ),
+            ),
             
-            //  Padding(
-            //   padding: const EdgeInsets.only(bottom: 10.0),
-            //   child:
-            //   Text("Area: $selectedArea"),
-            // ),  
-
+             Padding(
+              padding: const EdgeInsets.only(bottom: 10.0, top:10.0),
+              child:
+              Text("Area"),
+            ),   
             
-            // Container(
-            // padding: const EdgeInsets.only(bottom: 10.0,), 
-            // child:DropdownButtonFormField<String>(
-            //     decoration: InputDecoration(
-            //     border: OutlineInputBorder(),
-            //     hintText:"Pilih Salah Satu",
-            //     ),
-            //     items: ['Bendungan Sutami', 'Lowokwaru','sumbersari', 'merjosari', 'gajayana']
-            //     .map((String value) => DropdownMenuItem<String>(
-            //      value: value,
-            //      child: Text(value),
-            //     ))
-            //     .toList(),
-            //     onChanged: (String? value) {
-            //       setState((){
-            //         selectedArea = value;
-            //       });
-            //     },
-            //   ),),
+           TextField(
+              decoration: InputDecoration(
+               hintText:"sumbersari",
+                border: OutlineInputBorder(),
+                
+                
+              ),
+            ),
               
              Padding(
-              padding: const EdgeInsets.only(bottom: 10.0,),
+              padding: const EdgeInsets.only(bottom: 10.0, top:10.0),
               child:
-              Text("Status Awal : $selectedStatus"),
+              Text("Status Awal"),
               
               
             ),
             
-             Container(
-            padding: const EdgeInsets.only(bottom: 10.0,), 
-            child:DropdownButtonFormField<String>(
-                decoration: InputDecoration(
+             TextField(
+              decoration: InputDecoration(
+               hintText:"Q&A",
                 border: OutlineInputBorder(),
-                hintText:"Pilih Salah Satu",
-                ),
-                items: ['Closing','Q&A','Canceled','Uncover']
-                .map((String value) => DropdownMenuItem<String>(
-                 value: value,
-                 child: Text(value),
-                ))
-                .toList(),
-                onChanged: (value) {
-                 setState((){
-                    selectedGender = value;
-                  });
-                },
-              ),
-              ),
                 
+                
+              ),
+            ),
+                
+              
               
             
               
