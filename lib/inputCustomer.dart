@@ -34,16 +34,38 @@ class _inputCustomer extends State<inputCustomer> {
   TextEditingController txtmetode = TextEditingController();
   TextEditingController txtArea = TextEditingController();
   TextEditingController txtstatusawal = TextEditingController();
-  _simpan(){
-    final respone = await http.post(
-      Uri.parse('http://127.0.0.1:8000/api/customer/add'),
-      // Uri.parse('http://103.184.19.7:8080/api/customer/add'),
-      body: {
-        'nama' : txtnama.text,
-        'nomor handphone' : txtnomorhp.text,
-        
-      }
+  
+  void _simpan() async {
+    ApiResponse response = await created_user(
+      "1", 
+      "2", 
+      'aaa', 
+      "123", 
+      'aaa', 
+      'male', 
+      'Q&A', 
+      'online');
+    if(response.error == null) {
+      // ScaffoldMessenger.of(context as BuildContext).showSnackBar(SnackBar(
+      //   content: Text("berhasil"),
+      // ));
+      print("berhasil");
+    }
+    else {
+      // ScaffoldMessenger.of(context as BuildContext).showSnackBar(SnackBar(
+      //   content: Text('${response.error}'),
+      // ));
+      print(response.error);
+    }
   }
+
+  // void _saveAndRedirectToDashboard() async {
+  //   SharedPreferences pref = await SharedPreferences.getInstance();
+  //   await pref.setString('token', user.token ?? '');
+  //   await pref.setString('user', user.username ?? '');
+  //   Navigator.of(context).pushAndRemoveUntil(MaterialPageRoute(builder: (context) => BottomNaviBar()),
+  //      (route) => false);
+  // }
 
   @override
   Widget build(BuildContext context) {

@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:Sales/Models/api_response.dart';
+import 'package:Sales/inputCustomer.dart';
 import 'package:Sales/services/user_services.dart';
 import 'package:http/http.dart' as http;
 import 'package:Sales/Models/constant.dart';
@@ -18,12 +19,12 @@ Future<ApiResponse> created_user(
   String address, 
   String gender, 
   String status, 
-  String approacg, 
-  String created_at) async {
-  print([name, contact, address, gender, status, approacg]);
+  String approach, 
+  ) async {
+  
   ApiResponse apiResponse = ApiResponse();
   try {
-    String token = await getToken();
+    // String token = await getToken();
     final response = await http.post(
       // Uri.parse('http://103.184.19.7:8080/api/login'),
       Uri.parse(
@@ -32,15 +33,17 @@ Future<ApiResponse> created_user(
       headers: {
         'Accept': 'application/json'},
       body: {
-      'name': name, 
-      'contact': contact, 
-      'address': address, 
-      'gender': gender, 
-      'status' :status, 
-      'approved' :approacg,
+        "name" : name,
+        "sales_id": sales_id,
+        "area_id": area_id,
+        "contact": contact,
+        "address": address,
+        "gender": gender,
+        "status" : status,
+        "approach" : approach,
       }
     );
-
+  print(response.statusCode);
     switch(response.statusCode){
       case 200:
         apiResponse.data = User.fromJson(jsonDecode(response.body));
