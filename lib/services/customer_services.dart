@@ -33,14 +33,15 @@ Future<ApiResponse> created_user(
       headers: {
         'Accept': 'application/json'},
       body: {
-        "name" : name,
         "sales_id": sales_id,
         "area_id": area_id,
+        "name" : name,
         "contact": contact,
         "address": address,
         "gender": gender,
         "status" : status,
         "approach" : approach,
+        
       }
     );
   print(response.statusCode);

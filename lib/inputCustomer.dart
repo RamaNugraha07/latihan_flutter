@@ -1,6 +1,7 @@
 import 'dart:js';
 
 import 'package:Sales/Models/Customer.dart';
+import 'package:Sales/Models/User.dart';
 import 'package:Sales/Models/api_response.dart';
 import 'package:Sales/services/customer_services.dart';
 import 'package:flutter/material.dart';
@@ -35,16 +36,17 @@ class _inputCustomer extends State<inputCustomer> {
   TextEditingController txtArea = TextEditingController();
   TextEditingController txtstatusawal = TextEditingController();
   
+  
   void _simpan() async {
     ApiResponse response = await created_user(
-      "1", 
-      "2", 
-      'aaa', 
-      "123", 
-      'aaa', 
-      'male', 
-      'Q&A', 
-      'online');
+      "007", 
+      txtarea_id.text,
+      txtnama.text, 
+      txtnomorhp.text, 
+      txtalamat.text,  
+      txtjeniskelamin.text, 
+      txtmetode.text, 
+      txtstatusawal.text);
     if(response.error == null) {
       // ScaffoldMessenger.of(context as BuildContext).showSnackBar(SnackBar(
       //   content: Text("berhasil"),
@@ -171,12 +173,12 @@ class _inputCustomer extends State<inputCustomer> {
                Padding(
               padding: const EdgeInsets.only(bottom: 10.0, top:10.0),
               child:
-              Text("Metode"),
+              Text("Status Awal"),
             ),   
             TextFormField(
               controller: txtmetode,
               decoration: InputDecoration(
-               hintText:"online / offline",
+               hintText:"Q&A, Canceled, Uncover, Closing",
                 border: OutlineInputBorder(),
                 
                 
@@ -188,31 +190,31 @@ class _inputCustomer extends State<inputCustomer> {
               }
             ),
             
-             Padding(
-              padding: const EdgeInsets.only(bottom: 10.0, top:10.0),
-              child:
-              Text("Area"),
-            ),   
+          //    Padding(
+          //     padding: const EdgeInsets.only(bottom: 10.0, top:10.0),
+          //     child:
+          //     Text("Area"),
+          //   ),   
             
-           TextFormField(
-            controller: txtArea,
-              decoration: InputDecoration(
-               hintText:"sumbersari",
-                border: OutlineInputBorder(),
+          //  TextFormField(
+          //   controller: txtArea,
+          //     decoration: InputDecoration(
+          //      hintText:"sumbersari",
+          //       border: OutlineInputBorder(),
                 
                 
-              ),
-              validator: (value) {
-                if (value!.isEmpty) {
-                  return 'Area Tidak Boleh Kosong';
-                }
-              }
-            ),
+          //     ),
+          //     validator: (value) {
+          //       if (value!.isEmpty) {
+          //         return 'Area Tidak Boleh Kosong';
+          //       }
+          //     }
+          //   ),
               
              Padding(
               padding: const EdgeInsets.only(bottom: 10.0, top:10.0),
               child:
-              Text("Status Awal"),
+              Text("Metode"),
               
               
             ),
@@ -220,7 +222,7 @@ class _inputCustomer extends State<inputCustomer> {
              TextFormField(
               controller: txtstatusawal,
               decoration: InputDecoration(
-               hintText:"Q&A",
+               hintText:"offline / online",
                 border: OutlineInputBorder(),
                 
                 
@@ -240,7 +242,12 @@ class _inputCustomer extends State<inputCustomer> {
                 onPressed: () {
                   if (formKey.currentState!.validate()) {
                     _simpan();
+                  
                   }
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => BottomNaviBar()),
+                );
                 },
                 child: Text('Submit'),
               

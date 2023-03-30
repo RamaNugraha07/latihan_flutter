@@ -3,6 +3,7 @@ const baseURL = "http://127.0.0.1:8000/api";
 const loginURL = baseURL + "/login";
 const inputURL = baseURL + "/customer/add";
 const userURL = baseURL + "/user";
+const readURL = baseURL + "/customer/index";
 const serverError = "Server error";
 const unautorized = "Unautorized";
 const unknown = "Something error";

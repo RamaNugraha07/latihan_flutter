@@ -3,6 +3,7 @@ import 'package:Sales/dashboard/input.dart';
 import 'package:Sales/dummy.dart';
 import 'package:Sales/inputCustomer.dart';
 import 'package:Sales/login.dart';
+import 'package:Sales/monitoring.dart';
 import 'package:Sales/navbar.dart';
 import 'package:Sales/profile.dart';
 import 'package:flutter/material.dart';
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: inputCustomer(),
+      home: Monitoring(),
 
     );
   }
